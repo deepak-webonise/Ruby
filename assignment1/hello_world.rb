@@ -26,6 +26,3 @@ rescue Exception => e
     puts "Invalid Number. Please enter valid number"
     retry
 end
-
-
-
