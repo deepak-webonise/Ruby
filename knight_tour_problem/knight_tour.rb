@@ -32,7 +32,7 @@ class Board
           	return true
           else
             @board[next_x][next_y] = 0
-    	  end
+          end
     	end
       end
       return false
