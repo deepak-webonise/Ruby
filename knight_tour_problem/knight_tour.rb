@@ -29,7 +29,7 @@ class Board
       if(safe_move(next_x,next_y)) 	      
         @board[next_x][next_y] = value
         if(move(next_x,next_y,value+1) === true)
-	      return true
+          return true
         else
           @board[next_x][next_y] = 0
         end
