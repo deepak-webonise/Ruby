@@ -242,8 +242,8 @@ class User
       order.push(gets.chomp)
       puts "Enter CVV card number"
       order.push(gets.chomp)
-      shopkeeper = ShopKeeper.new      
-      shopkeeper.edit_product(true, order[1].to_i)
+      shopkeeper = ShopKeeper.new   
+      shopkeeper.edit_product(true, order[1][0].to_i)
       file = FileOperations.append_mode("files/orders.csv")
       file.puts(order.join("\t"))      
       file.close               
