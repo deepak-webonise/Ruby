@@ -1,4 +1,5 @@
 Metaprogramming Assignment
+_______________________
 Script in Ruby which takes csv file as input, converts its name into a class
 
 Example 
