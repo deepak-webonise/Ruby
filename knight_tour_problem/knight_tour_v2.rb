@@ -1,5 +1,5 @@
 # usr/bin/ruby -w
-# Datastructure as Graph
+# Datastructure as Graph and Wornsdroff algorithm.
 class Graph
   def initialize(no_rows, no_cols)
     @board = Array.new(no_rows) { Array.new(no_cols) }
@@ -73,7 +73,6 @@ class Vertex
     @row = row
     @col = col
     @visited = false
-    @count_moves = 0
   end
   attr_reader :row, :col, :edges
   attr_accessor :visited
