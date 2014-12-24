@@ -3,7 +3,8 @@
 class Graph
   def initialize(no_rows, no_cols)
     @board = Array.new(no_rows) { Array.new(no_cols) }
-    @path = Array.new(no_rows) { Array.new(no_cols) }
+    @path = Array.new(no_rows) { Array.new(no_cols) { '-' } }
+    @count = 0
     no_rows.times do |row|
       no_cols.times do |col|
         @board[row][col] = Vertex.new Array.new, row, col
@@ -17,7 +18,8 @@ class Graph
 
   def push_valid_moves(square)
     knight_next_move = []
-    knight_next_move.push([-2, -1], [-2, 1], [-1, -2], [-1, 2], [1, -2], [1, 2], [2, -1], [2, 1])
+    knight_next_move.push([-2, -1], [-2, 1], [-1, -2], [-1, 2], [1, -2], \
+                          [1, 2], [2, -1], [2, 1])
     knight_next_move.each do |value|
       row = square.row + value[0]
       col = square.col + value[1]
@@ -34,13 +36,15 @@ class Graph
   end
 
   def start_move(row, col)
-    warnsdorf_algorithm @board[row][col], 1
+    warnsdorf_algorithm @board[row][col]
   end
 
   def print_board
+    puts @count == @board.length**2 ? 'Knight Tour Completed' : 'Incomplete'\
+    ' tour of Knight'
     @path.length.times do |row|
       @path.length.times do |col|
-        print "\s" + @path[row][col].to_s + "\s"
+        print "\s #{@path[row][col]} \s"
       end
       puts
     end
@@ -54,15 +58,15 @@ class Graph
     min_vertex
   end
 
-  def warnsdorf_algorithm(current_square, count)
+  def warnsdorf_algorithm(current_square)
     current_square.visited = true
     next_moves = []
-    @path[current_square.row][current_square.col] = count
+    @path[current_square.row][current_square.col] = @count += 1
     current_square.edges.each do |vertex|
       vertex.visited || next_moves.push(vertex)
     end
     min_moves_square = find_min_moves next_moves
-    min_moves_square && (warnsdorf_algorithm min_moves_square, count + 1)
+    min_moves_square && (warnsdorf_algorithm min_moves_square)
   end
 end
 
@@ -80,5 +84,5 @@ end
 
 obj_graph = Graph.new 5, 5
 obj_graph.generate_moves
-obj_graph.start_move 2, 2
+obj_graph.start_move 2, 1
 obj_graph.print_board
