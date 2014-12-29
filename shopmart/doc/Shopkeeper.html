@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Shopkeeper - RDoc Documentation</title>
+
+<link href="./fonts.css" rel="stylesheet">
+<link href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/navigation.js"></script>
+<script src="./js/search_index.js"></script>
+<script src="./js/search.js"></script>
+<script src="./js/searcher.js"></script>
+<script src="./js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">Object
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-add_product">#add_product</a>
+    
+    <li ><a href="#method-i-delete_product">#delete_product</a>
+    
+    <li ><a href="#method-i-edit_product">#edit_product</a>
+    
+    <li ><a href="#method-i-list_product">#list_product</a>
+    
+    <li ><a href="#method-i-menu">#menu</a>
+    
+    <li ><a href="#method-i-search">#search</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Shopkeeper">
+  <h1 id="class-Shopkeeper" class="class">
+    class Shopkeeper
+  </h1>
+
+  <section class="description">
+    
+<p><a href="Shopkeeper.html">Shopkeeper</a> class</p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/classes/shopkeeper.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>
+  <span class="ruby-identifier">system</span>(<span class="ruby-string">&#39;clear&#39;</span>)
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;Welcome Shopkeeper&#39;</span>
+  <span class="ruby-identifier">menu</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-add_product" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">add_product</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>add new products to the database.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="add_product-source">
+            <pre><span class="ruby-comment"># File lib/classes/shopkeeper.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add_product</span>
+  <span class="ruby-identifier">product</span> = <span class="ruby-constant">Product</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;Enter Product Name&#39;</span>
+  <span class="ruby-identifier">product</span>.<span class="ruby-identifier">name</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">chomp</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;Enter Product Rate&#39;</span>
+  <span class="ruby-identifier">product</span>.<span class="ruby-identifier">price</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">chomp</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;Enter Product Company &#39;</span>
+  <span class="ruby-identifier">product</span>.<span class="ruby-identifier">company</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">chomp</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;Enter Product Stock&#39;</span>
+  <span class="ruby-identifier">product</span>.<span class="ruby-identifier">stock</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">chomp</span>
+  <span class="ruby-identifier">product</span>.<span class="ruby-identifier">save</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-delete_product" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">delete_product</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Shokeeper can delete existing product</p>
+          
+          
+
+          
+          <div class="method-source-code" id="delete_product-source">
+            <pre><span class="ruby-comment"># File lib/classes/shopkeeper.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete_product</span>
+  <span class="ruby-identifier">product</span> = <span class="ruby-constant">Product</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;Enter Product Id&#39;</span>
+  <span class="ruby-identifier">product</span>.<span class="ruby-identifier">id</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">chomp</span>
+  <span class="ruby-identifier">product</span>.<span class="ruby-identifier">delete</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-edit_product" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">edit_product</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>edit exisiting products.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="edit_product-source">
+            <pre><span class="ruby-comment"># File lib/classes/shopkeeper.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">edit_product</span>
+  <span class="ruby-identifier">product</span> = <span class="ruby-constant">Product</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;Enter Product Id&#39;</span>
+  <span class="ruby-identifier">product</span>.<span class="ruby-identifier">id</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">chomp</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;Enter Product Name&#39;</span>
+  <span class="ruby-identifier">product</span>.<span class="ruby-identifier">name</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">chomp</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;Enter Product Rate&#39;</span>
+  <span class="ruby-identifier">product</span>.<span class="ruby-identifier">price</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">chomp</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;Enter Product Company &#39;</span>
+  <span class="ruby-identifier">product</span>.<span class="ruby-identifier">company</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">chomp</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;Enter Product Stock&#39;</span>
+  <span class="ruby-identifier">product</span>.<span class="ruby-identifier">stock</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">chomp</span>
+  <span class="ruby-identifier">product</span>.<span class="ruby-identifier">update</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-list_product" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">list_product</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>list products to the shokeeper</p>
+          
+          
+
+          
+          <div class="method-source-code" id="list_product-source">
+            <pre><span class="ruby-comment"># File lib/classes/shopkeeper.rb, line 69</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">list_product</span>
+  <span class="ruby-identifier">product</span> = <span class="ruby-constant">Product</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">list</span> = <span class="ruby-identifier">product</span>.<span class="ruby-identifier">list</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;_________________________________________&#39;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Id\tName\tPrice\tCompany\tStock&quot;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;_________________________________________&#39;</span>
+  <span class="ruby-identifier">list</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-identifier">row</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;;&#39;</span>).<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;\t&quot;</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;_________________________________________&#39;</span>
+  <span class="ruby-identifier">menu</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-menu" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">menu</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Display menu to shopkeeper</p>
+          
+          
+
+          
+          <div class="method-source-code" id="menu-source">
+            <pre><span class="ruby-comment"># File lib/classes/shopkeeper.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">menu</span>
+      <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\nMenu \n Enter menu number to select&quot;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;1. Add Product&#39;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;2. Edit Product&#39;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;3. Delete Product&#39;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;4. List Product&#39;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;5. Search Product&#39;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;6. Exit&#39;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;Enter menu number :&#39;</span>
+  <span class="ruby-identifier">choice</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">to_i</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">choice</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">1</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">add_product</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">2</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">edit_product</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">3</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">delete_product</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">4</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">list_product</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">5</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">search</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">6</span> <span class="ruby-keyword">then</span> <span class="ruby-constant">Ignite</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;Invalid Choice&#39;</span>
+      <span class="ruby-identifier">menu</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-search" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">search</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>search product by name</p>
+          
+          
+
+          
+          <div class="method-source-code" id="search-source">
+            <pre><span class="ruby-comment"># File lib/classes/shopkeeper.rb, line 82</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">search</span>
+  <span class="ruby-identifier">product</span> = <span class="ruby-constant">Product</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;Enter Product Name&#39;</span>
+  <span class="ruby-identifier">product</span>.<span class="ruby-identifier">name</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">chomp</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-identifier">product</span>.<span class="ruby-identifier">search</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
