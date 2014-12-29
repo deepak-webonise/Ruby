@@ -74,14 +74,14 @@ end
 
 # Class Vertex : create a object for each square in board
 class Vertex
+  attr_reader :row, :col
+  attr_accessor :visited, :edges
   def initialize(edges, row, col)
     @edges = edges
     @row = row
     @col = col
     @visited = false
   end
-  attr_reader :row, :col, :edges
-  attr_accessor :visited
 end
 
 obj_graph = Graph.new 5, 5
