@@ -1,0 +1,2 @@
+require 'shopmart'
+Shopkeeper.new
