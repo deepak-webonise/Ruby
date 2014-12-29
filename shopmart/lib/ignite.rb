@@ -1,9 +1,6 @@
 # /usr/bin/ruby -w
-require './classes/shopkeeper'
-require './classes/product'
-require './classes/customer'
-require './classes/order'
-require './modules/file_operations'
+require 'classes/shopkeeper'
+require 'classes/customer'
 # Initilize the application
 class Ignite
   def initialize

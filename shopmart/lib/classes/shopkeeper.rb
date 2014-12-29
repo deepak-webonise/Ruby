@@ -1,5 +1,5 @@
 # /usr/bin/ruby -w
-
+require 'classes/product'
 # Shopkeeper class
 class Shopkeeper
   def initialize
@@ -7,14 +7,15 @@ class Shopkeeper
     puts 'Welcome Shopkeeper'
     menu
   end
-
+  #Display menu to shopkeeper
   def menu
   	puts "\nMenu \n Enter menu number to select"
     puts '1. Add Product'
     puts '2. Edit Product'
     puts '3. Delete Product'
     puts '4. List Product'
-    puts '5. Exit'
+    puts '5. Search Product'
+    puts '6. Exit'
     puts 'Enter menu number :'
     choice = gets.to_i
     case choice
@@ -22,13 +23,14 @@ class Shopkeeper
       when 2 then edit_product
       when 3 then delete_product
       when 4 then list_product
-      when 5 then Ignite.new
+      when 5 then search
+      when 6 then Ignite.new
       else
       	puts 'Invalid Choice'
       	menu
     end
   end
-
+  #add new products to the database.
   def add_product
     product = Product.new
     puts 'Enter Product Name'
@@ -41,7 +43,7 @@ class Shopkeeper
     product.stock = gets.chomp
     product.save
   end
-
+  #edit exisiting products.
   def edit_product
     product = Product.new
     puts 'Enter Product Id'
@@ -56,14 +58,14 @@ class Shopkeeper
     product.stock = gets.chomp
     product.update
   end
-
+  #Shokeeper can delete existing product
   def delete_product
     product = Product.new
     puts 'Enter Product Id'
     product.id = gets.chomp
     product.delete
   end
-
+  #list products to the shokeeper
   def list_product
     product = Product.new
     list = product.list
@@ -76,7 +78,7 @@ class Shopkeeper
     puts '_________________________________________'
     menu
   end
-
+  #search product by name
   def search
     product = Product.new
     puts 'Enter Product Name'

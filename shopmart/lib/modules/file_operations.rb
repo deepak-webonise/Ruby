@@ -1,22 +1,33 @@
 # /usr/bin/ruby -w
 # Fileoperations Module
 module FileOperations
-  FILE_PATH = './database/'
+  FILE_PATH = 'lib/database/'
   def self.read_mode(file_name)
   	begin
-  		File.open(FILE_PATH + file_name, 'r').readlines	
+      File.open(FILE_PATH + file_name, 'r').readlines	
   	rescue Exception => e
-  		puts 'Error in reading file'
+  	  puts 'Error in reading file'
+  	  puts e.message
   	end
     
   end
 
   def self.write_mode(file_name)
-    File.open(FILE_PATH + file_name, 'w')
+    begin
+      File.open(FILE_PATH + file_name, 'w')	
+  	rescue Exception => e
+  	  puts 'Error in reading file'
+  	  puts e.message
+  	end
   end
 
   def self.append_mode(file_name)
-    File.open(FILE_PATH + file_name, 'a')
+    begin
+      File.open(FILE_PATH + file_name, 'a')	
+  	rescue Exception => e
+  	  puts 'Error in reading file'
+  	  puts e.message
+  	end
   end
 
   def self.add(obj)

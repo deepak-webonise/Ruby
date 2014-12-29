@@ -1,2 +1,1 @@
-require 'classes/shopkeeper'
-shopkeeper.new
+require 'ignite'

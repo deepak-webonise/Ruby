@@ -1,4 +1,6 @@
 # /usr/bin/ruby -w
+require 'classes/order'
+require 'classes/product'
 # Customer Class
 class Customer
   def initialize
@@ -6,7 +8,7 @@ class Customer
     puts 'Welcome Customer'
     menu
   end
-
+  #Menu for customers.
   def menu
   	puts 'Menu'
     puts '1. List Product'
@@ -25,7 +27,7 @@ class Customer
         menu
     end
   end
-
+  #List the products for customers
   def list_product
     product = Product.new
     list = product.list
@@ -38,7 +40,7 @@ class Customer
     puts '_________________________________________'
     menu
   end
-
+  #Customer can search the product by name.
   def search
     product = Product.new
     puts 'Enter Product Name'
@@ -46,7 +48,7 @@ class Customer
     puts product.search
     menu
   end
-
+  #Customer can place order which is in stock.
   def place_order
     product = Product.new
     order =  Order.new

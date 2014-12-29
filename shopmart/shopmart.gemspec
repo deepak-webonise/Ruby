@@ -7,8 +7,8 @@ Gem::Specification.new do |s|
   s.description = "Shopping Inventory : Has two users shopkeepr and customer"
   s.authors     = ["Deepak Kabbur"]
   s.email       = 'deepak.kabbur@weboniselab.com'
-  s.files       = Dir['lib/ *.rb'] + Dir['bin/*']
-  s.require_path = ['lib']
+  s.files       = Dir.glob("{bin,lib}/**/*")
+  s.require_path = 'lib'
   s.bindir = 'bin'
   s.executables << 'shopmart'
   s.homepage    =

@@ -1,2 +1,0 @@
-require 'shopmart'
-Shopkeeper.new

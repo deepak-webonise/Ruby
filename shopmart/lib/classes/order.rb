@@ -1,4 +1,6 @@
 # /usr/bin/ruby -w
+require 'modules/file_operations'
+require 'classes/product'
 # Order Class
 class Order
   attr_accessor :id, :product_id, :product_name, :credit_card, :ccv
